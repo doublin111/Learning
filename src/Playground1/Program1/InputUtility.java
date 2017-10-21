@@ -6,7 +6,7 @@ public final class InputUtility {
 
     private static Scanner input = new Scanner(System.in);
 
-    public static double validateIfNumber() {
+    public static double validateIfDouble() {
 
         double number;
 
@@ -17,6 +17,22 @@ public final class InputUtility {
                 continue;
             }
             number = input.nextDouble();
+            break;
+        }
+        return number;
+    }
+
+    public static int validateIfInt() {
+
+        int number;
+
+        for (; ; ) {
+            if (!input.hasNextInt()) {
+                System.out.println("That's not a number, please try again.");
+                input.next();
+                continue;
+            }
+            number = input.nextInt();
             break;
         }
         return number;

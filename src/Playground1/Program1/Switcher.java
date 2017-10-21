@@ -17,10 +17,10 @@ class Switcher {
                 System.out.println("Sum");
 
                 System.out.println("Please pick the first number: ");
-                firstNumber = InputUtility.validateIfNumber();
+                firstNumber = InputUtility.validateIfDouble();
 
                 System.out.println("Please pick the second number: ");
-                secondNumber = InputUtility.validateIfNumber();
+                secondNumber = InputUtility.validateIfDouble();
 
                 System.out.println("The result is: " + df.format(firstNumber + secondNumber) + "\n");
                 break;
@@ -29,10 +29,10 @@ class Switcher {
                 System.out.println("Subtract");
 
                 System.out.println("Please pick the first number: ");
-                firstNumber = InputUtility.validateIfNumber();
+                firstNumber = InputUtility.validateIfDouble();
 
                 System.out.println("Please pick the second number: ");
-                secondNumber = InputUtility.validateIfNumber();
+                secondNumber = InputUtility.validateIfDouble();
 
                 System.out.println("The result is: " + df.format(firstNumber - secondNumber) + "\n");
                 break;
@@ -41,10 +41,10 @@ class Switcher {
                 System.out.println("Multiply");
 
                 System.out.println("Please pick the first number: ");
-                firstNumber = InputUtility.validateIfNumber();
+                firstNumber = InputUtility.validateIfDouble();
 
                 System.out.println("Please pick the second number: ");
-                secondNumber = InputUtility.validateIfNumber();
+                secondNumber = InputUtility.validateIfDouble();
 
                 System.out.println("The result is: " + df.format(firstNumber * secondNumber) + "\n");
                 break;
@@ -53,10 +53,10 @@ class Switcher {
                 System.out.println("Division");
 
                 System.out.println("Please pick the first number: ");
-                firstNumber = InputUtility.validateIfNumber();
+                firstNumber = InputUtility.validateIfDouble();
 
                 System.out.println("Please pick the second number: ");
-                secondNumber = InputUtility.validateIfNumber();
+                secondNumber = InputUtility.validateIfDouble();
 
                 System.out.printf("The result is: " + df.format(firstNumber / secondNumber) + "\n");
                 break;
@@ -65,10 +65,10 @@ class Switcher {
                 System.out.println("Remainder");
 
                 System.out.println("Please pick the first number: ");
-                firstNumber = InputUtility.validateIfNumber();
+                firstNumber = InputUtility.validateIfDouble();
 
                 System.out.println("Please pick the second number: ");
-                secondNumber = InputUtility.validateIfNumber();
+                secondNumber = InputUtility.validateIfDouble();
 
                 System.out.println("The result is: " + df.format(firstNumber % secondNumber) + "\n");
                 break;
@@ -77,10 +77,10 @@ class Switcher {
                 System.out.println("Percentage");
 
                 System.out.println("Please pick the first number: ");
-                firstNumber = InputUtility.validateIfNumber();
+                firstNumber = InputUtility.validateIfDouble();
 
                 System.out.println("Please pick the second number: ");
-                secondNumber = InputUtility.validateIfNumber();
+                secondNumber = InputUtility.validateIfDouble();
 
                 System.out.println("The result is: " + df.format((firstNumber * 100) / secondNumber) + "%" + "\n");
                 break;
