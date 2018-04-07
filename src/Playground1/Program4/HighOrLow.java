@@ -15,13 +15,12 @@ public class HighOrLow {
 
     public static void main(String[] args) {
 
-        System.out.println("This program lets you play the simple card game,");
-        System.out.println("HighLow. A card is dealt from a deck of cards.");
-        System.out.println("You have to predict whether the next card will be");
-        System.out.println("higher or lower. Your score in the game is the");
-        System.out.println("number of correct predictions you make before");
-        System.out.println("you guess wrong.");
-        System.out.println();
+        System.out.println("This program lets you play the simple card game,\n" +
+                "        HighLow. A card is dealt from a deck of cards.\n" +
+                "        You have to predict whether the next card will be\n" +
+                "        higher or lower. Your score in the game is the\n" +
+                "        number of correct predictions you make before\n" +
+                "        you guess wrong.\n");
 
         int gamesPlayed = 0;                    // number of games that the user has played.
         int sumOfScores = 0;                    // the sum of all the scores the user has played.
@@ -54,18 +53,18 @@ public class HighOrLow {
 
 
             if (userCard.getValue() == drawnCard.getValue()) {
-                System.out.println("You got the same card as the board so you lost.");
+                System.out.println("You got the same card as the deck so you lost.");
 
             } else if (userCard.getValue() < drawnCard.getValue()) {
                 if (userGuess == 1) {
                     System.out.println("Good job, the card was higher.");
                     sumOfScores++;
-                } else System.out.println("Your prediction was incorrect");
+                } else System.out.println("Your prediction was incorrect.");
             } else {
                 if (userGuess == 2) {
                     System.out.println("Good job, the card was lower.");
                     sumOfScores++;
-                } else System.out.println("Your prediction was incorrect");
+                } else System.out.println("Your prediction was incorrect.");
             }
 
             System.out.println("Do you wish to start over? \n 1.Yes \n 2.No");
