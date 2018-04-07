@@ -2,52 +2,43 @@ package Playground1.Program4;
 
 public class Card {
 
-    /**
-     * code for the 4 suits
-     */
+    /* named constants representing the suits */
     public final static int SPADES = 0;
     public final static int HEARTS = 1;
     public final static int DIAMONDS = 2;
     public final static int CLUBS = 3;
 
-    /**
-     * code for the non-numeric cards;
-     * numeric cards (2 to 10) have their
-     * numerical value for their codes.
-     */
+    /* named constants representing the non-numeric card values;
+    numeric cards 2 to 10 have their numeric values for their code */
     public final static int ACE = 1;
     public final static int JACK = 11;
     public final static int QUEEN = 12;
     public final static int KING = 13;
 
+    /* this card's suit and value */
+    private final int suit;
+    private final int value;
 
-    private final int suit;                 // This card's suit which can't be changed once the card is constructed.
-    private final int value;                // This card's value which can't be changed once the card is constructed.
-
-    /********************
-     * card constructor**
-     ********************/
+    /* card constructor */
     public Card(int theValue, int theSuit) {
-
         value = theValue;
         suit = theSuit;
     }
 
-    /****************
-     * card methods**
-     ***************/
+    /************************
+     ***** card methods *****
+     ************************/
 
-    // suit getter
+    /* two getters for the card's suit and value*/
     public int getSuit() {
         return suit;
     }
 
-    // value getter
     public int getValue() {
         return value;
     }
 
-    // suit as String getter
+    /* getter for the card's suit as String */
     public String getSuitAsString() {
         switch (suit) {
             case SPADES:
@@ -61,7 +52,7 @@ public class Card {
         }
     }
 
-    // value as String getter
+    /* getter for the card's value as String */
     public String getValueAsString() {
         switch (value) {
             case ACE:
@@ -94,7 +85,7 @@ public class Card {
         }
     }
 
-    // full String getter for the card (suit + value)
+    /* getter for a complete card as String (suit and value) */
     public String toString() {
         return getValueAsString() + " of " + getSuitAsString();
     }
