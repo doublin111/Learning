@@ -6,6 +6,7 @@ public class Hand {
 
     private ArrayList<Card> hand;
 
+
     /* Create a hand that is initially empty. */
     public Hand() {
         hand = new ArrayList<>();
@@ -102,4 +103,6 @@ public class Hand {
         }
         hand = newHand;
     }
+
+
 }
