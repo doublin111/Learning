@@ -2,24 +2,24 @@ package Playground1.Program4;
 
 public class Card {
 
-    /* named constants representing the suits */
+    /* Named constants representing the suits */
     public final static int SPADES = 0;
     public final static int HEARTS = 1;
     public final static int DIAMONDS = 2;
     public final static int CLUBS = 3;
 
-    /* named constants representing the non-numeric card values;
-    numeric cards 2 to 10 have their numeric values for their code */
+    /* Named constants representing the non-numeric card values;
+     * numeric cards 2 to 10 have their numeric values for their code */
     public final static int ACE = 1;
     public final static int JACK = 11;
     public final static int QUEEN = 12;
     public final static int KING = 13;
 
-    /* this card's suit and value */
+    /* This card's suit and value */
     private final int suit;
     private final int value;
 
-    /* card constructor */
+    /* Card constructor */
     public Card(int theValue, int theSuit) {
         value = theValue;
         suit = theSuit;
@@ -29,7 +29,7 @@ public class Card {
      ***** card methods *****
      ************************/
 
-    /* two getters for the card's suit and value*/
+    /* Two getters for the card's suit and value*/
     public int getSuit() {
         return suit;
     }
@@ -38,7 +38,7 @@ public class Card {
         return value;
     }
 
-    /* getter for the card's suit as String */
+    /* Getter for the card's suit as String */
     public String getSuitAsString() {
         switch (suit) {
             case SPADES:
@@ -52,7 +52,7 @@ public class Card {
         }
     }
 
-    /* getter for the card's value as String */
+    /* Getter for the card's value as String */
     public String getValueAsString() {
         switch (value) {
             case ACE:
@@ -85,7 +85,7 @@ public class Card {
         }
     }
 
-    /* getter for a complete card as String (suit and value) */
+    /* Getter for a complete card as String (suit and value) */
     public String toString() {
         return getValueAsString() + " of " + getSuitAsString();
     }
