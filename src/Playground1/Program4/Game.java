@@ -10,6 +10,7 @@ public class Game extends Ranks{
         deck.shuffle();
 
         Hand firstPlayer = new Hand();
+        Hand testHand = new Hand();
 
         for (int i = 0; i < MAX_HAND_SIZE; i++) {
             firstPlayer.addCard(deck.dealCard());
