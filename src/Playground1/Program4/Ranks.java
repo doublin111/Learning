@@ -14,10 +14,11 @@ public class Ranks {
     }
 
 
-    /********************** Methods for hand rankings. *****************************
-     **** It returns a double (ex. 2.0 for two pairs or 3.0 for three of a kind) ***
-     **** plus a decimal which represents the high card(s) for cases of hand tie. **
-     ******************************************************************************/
+    /*********************** Methods for hand rankings. *********************************
+     **** It returns a double (ex. 2.0 for two pairs or 3.0 for three of a kind) ********
+     **** plus a decimal which represents the high card(s) when two or more *************
+     **** players have the same hands. **************************************************
+     ***********************************************************************************/
 
     static double isThreeOfAKind(Hand hand) {
         double result = 0.0;
