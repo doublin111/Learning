@@ -1,6 +1,6 @@
 package Playground1.Program4;
 
-public class Game extends Ranks{
+public class Game extends Ranks {
 
     final static int MAX_HAND_SIZE = 5;
 
@@ -10,7 +10,6 @@ public class Game extends Ranks{
         deck.shuffle();
 
         Hand firstPlayer = new Hand();
-        Hand testHand = new Hand();
 
         for (int i = 0; i < MAX_HAND_SIZE; i++) {
             firstPlayer.addCard(deck.dealCard());
