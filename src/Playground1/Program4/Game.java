@@ -10,24 +10,6 @@ public class Game extends Ranks {
 
         Hand firstPlayer = new Hand();
 
-        /* manually created cards used to test hand ranks methods */
-
-//        Card card1 = new Card(1, 2);
-//        Card card2 = new Card(2, 2);
-//        Card card3 = new Card(3, 2);
-//        Card card4 = new Card(4, 2);
-//        Card card5 = new Card(5, 2);
-
-//        Hand rankTestHand = new Hand();
-
-//        rankTestHand.addCard(card1);
-//        rankTestHand.addCard(card2);
-//        rankTestHand.addCard(card3);
-//        rankTestHand.addCard(card4);
-//        rankTestHand.addCard(card5);
-
-        /* end testings */
-
         for (int i = 0; i < MAX_HAND_SIZE; i++) {
             firstPlayer.addCard(deck.dealCard());
         }
@@ -40,5 +22,30 @@ public class Game extends Ranks {
         }
 
         checkHandRanks(firstPlayer);
+
+        /* manually created cards used to test hand ranks methods */
+
+//        Card card1 = new Card(1, 2);
+//        Card card2 = new Card(2, 2);
+//        Card card3 = new Card(3, 2);
+//        Card card4 = new Card(4, 2);
+//        Card card5 = new Card(5, 2);
+//
+//        Hand rankTestHand = new Hand();
+//
+//        rankTestHand.addCard(card1);
+//        rankTestHand.addCard(card2);
+//        rankTestHand.addCard(card3);
+//        rankTestHand.addCard(card4);
+//        rankTestHand.addCard(card5);
+//
+//        for (int i = 0; i < MAX_HAND_SIZE; i++) {
+//            System.out.print(rankTestHand.getCard(i).toString());
+//            System.out.print("; ");
+//        }
+//
+//        checkHandRanks(rankTestHand);
+
+        /* end testings */
     }
 }
