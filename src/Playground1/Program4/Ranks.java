@@ -1,6 +1,6 @@
 package Playground1.Program4;
 
-public class Ranks {
+class Ranks {
 
     static void checkHandRanks(Hand hand) {
 
@@ -25,32 +25,58 @@ public class Ranks {
      ***********************************************************************************/
 
     static double isFlush(Hand hand) {
+        hand.sortByValue();
         double result = 0.0;
         String suit = hand.getCard(0).getSuitAsString();
 
-        for (int i = 0; i < 4; i++) {
-            result = 5.0 + (hand.getCard(i).getValue() * 0.01);
-            if (!hand.getCard(i).getSuitAsString().equals(suit))
-                result = 0.0;
-        }
+        if (hand.getCard(0).getSuitAsString().equals(suit)) {
+            if (hand.getCard(1).getSuitAsString().equals(suit)) {
+                if (hand.getCard(2).getSuitAsString().equals(suit)) {
+                    if (hand.getCard(3).getSuitAsString().equals(suit)) {
+                        if (hand.getCard(4).getSuitAsString().equals(suit)) {
+                            result = 5.0 + (hand.getCard(4).getValue() * 0.01);
+                        }
+                    }
+                }
+            }
+        } else result = 0.0;
         return result;
+
+        /* this for loop doesn't function correctly; must be fixed */
+//        for (int i = 0; i < 4; i++) {
+//            result = 5.0 + (hand.getCard(i).getValue() * 0.01);
+//            if (!hand.getCard(i).getSuitAsString().equals(suit))
+//                result = 0.0;
+//        }
+//        return result;
     }
 
     static double isStraight(Hand hand) {
-        double result = 0.0;
         hand.sortByValue();
+        double result = 0.0;
 
-        for (int i = 0; i < 4; i++) {
-            if (hand.getCard(i).getValue() == hand.getCard(i + 1).getValue() - 1) {
-                result = 4.0 + (hand.getCard(i + 1).getValue() * 0.01);
-            } else result = 0.0;
-        }
+        if (hand.getCard(0).getValue() == hand.getCard(1).getValue() - 1) {
+            if (hand.getCard(1).getValue() == hand.getCard(2).getValue() - 1) {
+                if (hand.getCard(2).getValue() == hand.getCard(3).getValue() - 1) {
+                    if (hand.getCard(3).getValue() == hand.getCard(4).getValue() - 1)
+                        result = 4.0 + (hand.getCard(4).getValue() * 0.01);
+                }
+            }
+        } else result = 0.0;
         return result;
+
+        /* this for loop doesn't function correctly; must be fixed. */
+//        for (int i = 0; i < 4; i++) {
+//            if (hand.getCard(i).getValue() == hand.getCard(i + 1).getValue() - 1) {
+//                result = 4.0 + (hand.getCard(i).getValue() * 0.01);
+//            } else result = 0.0;
+//        }
+//        return result;
     }
 
     static double isThreeOfAKind(Hand hand) {
-        double result = 0.0;
         hand.sortByValue();
+        double result = 0.0;
 
         for (int i = 0; i < 3; i++) {
             if (hand.getCard(i).getValue() == hand.getCard(i + 1).getValue() && hand.getCard(i).getValue() == hand.getCard(i + 2).getValue()) {
@@ -61,10 +87,10 @@ public class Ranks {
     }
 
     static double isTwoPair(Hand hand) {
+        hand.sortByValue();
         double result = 0.0;
         double value = 0.0;
-        int counter = 0;    // number of pairs
-        hand.sortByValue();
+        int counter = 0;    // track number of pairs
 
         for (int i = 0; i < 4; i++) {
             if (hand.getCard(i).getValue() == hand.getCard(i + 1).getValue()) {
@@ -80,8 +106,8 @@ public class Ranks {
     }
 
     static double isOnePair(Hand hand) {
-        double result = 0.0;
         hand.sortByValue();
+        double result = 0.0;
 
         for (int i = 0; i < 4; i++) {
             if (hand.getCard(i).getValue() == hand.getCard(i + 1).getValue()) {

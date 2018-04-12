@@ -3,24 +3,24 @@ package Playground1.Program4;
 public class Card {
 
     /* Named constants representing the suits */
-    public final static int SPADES = 0;
-    public final static int HEARTS = 1;
-    public final static int DIAMONDS = 2;
-    public final static int CLUBS = 3;
+    private final static int SPADES = 0;
+    private final static int HEARTS = 1;
+    private final static int DIAMONDS = 2;
+    private final static int CLUBS = 3;
 
     /* Named constants representing the non-numeric card values;
      * numeric cards 2 to 10 have their numeric values for their code */
-    public final static int ACE = 1;
-    public final static int JACK = 11;
-    public final static int QUEEN = 12;
-    public final static int KING = 13;
+    private final static int ACE = 1;
+    private final static int JACK = 11;
+    private final static int QUEEN = 12;
+    private final static int KING = 13;
 
     /* This card's suit and value */
     private final int suit;
     private final int value;
 
     /* Card constructor */
-    public Card(int theValue, int theSuit) {
+    Card(int theValue, int theSuit) {
         value = theValue;
         suit = theSuit;
     }
@@ -30,16 +30,16 @@ public class Card {
      ************************/
 
     /* Two getters for the card's suit and value*/
-    public int getSuit() {
+    int getSuit() {
         return suit;
     }
 
-    public int getValue() {
+    int getValue() {
         return value;
     }
 
     /* Getter for the card's suit as String */
-    public String getSuitAsString() {
+    String getSuitAsString() {
         switch (suit) {
             case SPADES:
                 return "Spades";
@@ -53,7 +53,7 @@ public class Card {
     }
 
     /* Getter for the card's value as String */
-    public String getValueAsString() {
+    String getValueAsString() {
         switch (value) {
             case ACE:
                 return "Ace";

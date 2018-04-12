@@ -12,7 +12,7 @@ public class Deck {
     /* Constructs a regular 52-card poker deck. Initially, the cards
      * are in a sorted order. The shuffle() method can be called to
      * randomize the order. */
-    public Deck() {
+    Deck() {
         deck = new Card[52];
         int cardsCreated = 0;
         for (int suit = 0; suit <= 3; suit++) {
@@ -26,7 +26,7 @@ public class Deck {
 
     /* Put all the used cards back into the deck (if any), and
      * shuffle the deck into a random order. */
-    public void shuffle() {
+    void shuffle() {
         for (int i = deck.length - 1; i > 0; i--) {
             int rand = (int) (Math.random() * (i + 1));
             Card temp = deck[i];
@@ -51,7 +51,7 @@ public class Deck {
      * check the number of cards remaining by calling the cardsLeft() function.
      * @return the card which is removed from the deck.
      * @throws IllegalStateException if there are no cards left in the deck. */
-    public Card dealCard() {
+    Card dealCard() {
         if (cardsUsed == deck.length)
             throw new IllegalStateException("No cards are left in the deck.");
         cardsUsed++;
