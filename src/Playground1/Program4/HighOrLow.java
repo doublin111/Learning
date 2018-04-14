@@ -69,8 +69,7 @@ public class HighOrLow {
 
             System.out.println("Do you wish to start over? \n 1.Yes \n 2.No");
             userMenu = InputUtility.validateRange(1, 2);
-            if (userMenu == 1) playAgain = true;
-            else playAgain = false;
+            playAgain = userMenu == 1;
         }
         while (playAgain);
     }

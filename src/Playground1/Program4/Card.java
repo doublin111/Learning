@@ -1,6 +1,6 @@
 package Playground1.Program4;
 
-public class Card {
+class Card {
 
     /* Named constants representing the suits */
     private final static int SPADES = 0;

@@ -2,25 +2,25 @@ package Playground1.Program4;
 
 import java.util.ArrayList;
 
-public class Hand {
+class Hand {
 
     private ArrayList<Card> hand;
 
 
     /* Create a hand that is initially empty. */
-    public Hand() {
+    Hand() {
         hand = new ArrayList<>();
     }
 
     /* Remove all cards from the hand, leaving it empty */
-    public void clear() {
+    void clear() {
         hand.clear();
     }
 
     /* Add a card to the hand. It is added at the end of the current hand.
      * @param c the non-null card to be added.
      * @throws NullPointerException if the parameter c is null. */
-    public void addCard(Card c) {
+    void addCard(Card c) {
         if (c == null)
             throw new NullPointerException("Can't add a null card to a hand.");
         hand.add(c);
@@ -29,7 +29,7 @@ public class Hand {
     /* Remove a card from the hand, if present.
      * @param c the card to be removed. If c is null or if the card is not in
      * the hand, then nothing is done. */
-    public void removeCard(Card c) {
+    void removeCard(Card c) {
         hand.remove(c);
     }
 
@@ -39,14 +39,14 @@ public class Hand {
      * @throws IllegalArgumentException if the position does not exist in
      * the hand, that is if the position is less than 0 or greater than
      * or equal to the number of cards in the hand. */
-    public void removeCard(int position) {
+    void removeCard(int position) {
         if (position < 0 || position >= hand.size())
             throw new IllegalArgumentException("Position does not exist in hand: " + position);
         hand.remove(position);
     }
 
     /* Returns the number of cards in the hand. */
-    public int getCardCount() {
+    int getCardCount() {
         return hand.size();
     }
 
@@ -54,7 +54,7 @@ public class Hand {
      * is not removed from the hand!
      * @param position the position of the card that is to be returned
      * @throws IllegalArgumentException if position does not exist in the hand */
-    public Card getCard(int position) {
+    Card getCard(int position) {
         if (position < 0 || position >= hand.size())
             throw new IllegalArgumentException("Position does not exist in hand: " + position);
         return hand.get(position);
@@ -64,7 +64,7 @@ public class Hand {
      * grouped together, and within a suit the cards are sorted by value.
      * Note that aces are considered to have the lowest value, 1. */
     public void sortBySuit() {
-        ArrayList<Card> newHand = new ArrayList<Card>();
+        ArrayList<Card> newHand = new ArrayList<>();
         while (hand.size() > 0) {
             int pos = 0;  // Position of minimal card.
             Card c = hand.get(0);  // Minimal card.
@@ -85,8 +85,8 @@ public class Hand {
     /* Sorts the cards in the hand so that cards of the same value are
      * grouped together.  Cards with the same value are sorted by suit.
      * Note that aces are considered to have the lowest value, 1. */
-    public void sortByValue() {
-        ArrayList<Card> newHand = new ArrayList<Card>();
+    void sortByValue() {
+        ArrayList<Card> newHand = new ArrayList<>();
         while (hand.size() > 0) {
             int pos = 0;  // Position of minimal card.
             Card c = hand.get(0);  // Minimal card.

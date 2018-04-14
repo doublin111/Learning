@@ -1,8 +1,10 @@
 package Playground1.Program4;
 
-public class Deck {
+@SuppressWarnings("unused")
+class Deck {
 
     /* An array of 52 cards */
+    @SuppressWarnings("CanBeFinal")
     private Card[] deck;
 
     /* Keeps track of the number of cards that have been dealt from
